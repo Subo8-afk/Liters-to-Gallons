@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Liters to Gallons Converter</title>
-  <meta name="description" content="Convert liters to US gallons and UK Imperial gallons instantly with this simple online liters to gallons converter.">
+
+  <meta
+    name="description"
+    content="Convert liters to US gallons and UK Imperial gallons instantly with this simple online liters to gallons converter."
+  >
 
   <style>
     * {
@@ -27,11 +31,25 @@
 
     header {
       text-align: center;
-      padding: 25px 0 15px;
+      padding: 15px 0 20px;
+    }
+
+    /* Main website link */
+    .website-link {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: #8a5d0b;
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .website-link:hover {
+      text-decoration: underline;
     }
 
     h1 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
       font-size: 38px;
       color: #333;
     }
@@ -48,8 +66,8 @@
       border: 1px solid #e5e5e5;
       border-radius: 14px;
       padding: 25px;
-      margin-top: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      margin-top: 25px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
     }
 
     .field {
@@ -159,6 +177,7 @@
 
     footer a {
       color: #8a5d0b;
+      font-weight: bold;
     }
 
     @media (max-width: 600px) {
@@ -181,19 +200,35 @@
 
   <main class="container">
 
+    <!-- Header -->
     <header>
+
+      <!-- Main website link at the top -->
+      <a
+        class="website-link"
+        href="https://liters2gallons.com/"
+      >
+        Online Liters to Gallons Converter →
+      </a>
+
       <h1>Liters to Gallons Converter</h1>
 
       <p class="intro">
         Convert liters to US gallons and UK Imperial gallons instantly.
         Enter a value below to see the equivalent volume in both gallon systems.
       </p>
+
     </header>
 
+
+    <!-- Converter -->
     <section class="converter">
 
       <div class="field">
-        <label for="liters">Liters (L)</label>
+
+        <label for="liters">
+          Liters (L)
+        </label>
 
         <input
           type="number"
@@ -202,44 +237,79 @@
           step="any"
           oninput="convertLiters()"
         >
+
       </div>
 
+
+      <!-- Results -->
       <div class="results">
 
         <div class="result">
-          <div class="result-title">US Gallons</div>
-          <div class="result-value" id="usGallons">0</div>
+
+          <div class="result-title">
+            US Gallons
+          </div>
+
+          <div
+            class="result-value"
+            id="usGallons"
+          >
+            0
+          </div>
+
         </div>
 
+
         <div class="result">
-          <div class="result-title">UK / Imperial Gallons</div>
-          <div class="result-value" id="ukGallons">0</div>
+
+          <div class="result-title">
+            UK / Imperial Gallons
+          </div>
+
+          <div
+            class="result-value"
+            id="ukGallons"
+          >
+            0
+          </div>
+
         </div>
 
       </div>
 
+
+      <!-- Conversion formulas -->
       <div class="formula">
-        <strong>Conversion formulas:</strong><br>
-        1 liter = 0.264172 US gallons<br>
+
+        <strong>Conversion formulas:</strong>
+        <br>
+
+        1 liter = 0.264172 US gallons
+        <br>
+
         1 liter = 0.219969 UK Imperial gallons
+
       </div>
 
     </section>
 
+
+    <!-- Information -->
     <section class="content">
 
       <h2>How to Convert Liters to Gallons</h2>
 
       <p>
-        To convert liters to US gallons, multiply the number of liters by
-        0.264172. To convert liters to UK Imperial gallons, multiply the
-        number of liters by 0.219969.
+        To convert liters to US gallons, multiply the number of liters
+        by 0.264172. To convert liters to UK Imperial gallons, multiply
+        the number of liters by 0.219969.
       </p>
 
       <p>
-        For example, 10 liters is approximately 2.64172 US gallons and
-        2.19969 UK gallons.
+        For example, 10 liters is approximately 2.64172 US gallons
+        and 2.19969 UK gallons.
       </p>
+
 
       <h2>US Gallons vs UK Gallons</h2>
 
@@ -250,23 +320,30 @@
       </p>
 
       <p>
-        This difference is important when converting measurements for fuel,
-        vehicles, cooking, manufacturing, engineering, and other applications.
+        This difference is important when converting measurements for
+        fuel, vehicles, cooking, manufacturing, engineering, and other
+        applications.
       </p>
+
 
       <h2>Common Conversions</h2>
 
       <div class="table-wrapper">
+
         <table>
+
           <thead>
+
             <tr>
               <th>Liters</th>
               <th>US Gallons</th>
               <th>UK Gallons</th>
             </tr>
+
           </thead>
 
           <tbody>
+
             <tr>
               <td>1 L</td>
               <td>0.2642</td>
@@ -302,14 +379,18 @@
               <td>26.4172</td>
               <td>21.9969</td>
             </tr>
+
           </tbody>
+
         </table>
+
       </div>
+
 
       <h2>Online Liters to Gallons Calculator</h2>
 
       <p>
-        For a quick and easy conversion, you can also use the main
+        For a quick and easy conversion, you can also use the
         <a href="https://liters2gallons.com/">
           Liters to Gallons Converter
         </a>.
@@ -317,7 +398,10 @@
 
     </section>
 
+
+    <!-- Footer -->
     <footer>
+
       <p>
         © 2026 Liters to Gallons Converter
       </p>
@@ -327,29 +411,53 @@
           Visit liters2gallons.com
         </a>
       </p>
+
     </footer>
 
   </main>
 
-  <script>
-    function convertLiters() {
-      const liters = parseFloat(document.getElementById("liters").value);
 
-      const usOutput = document.getElementById("usGallons");
-      const ukOutput = document.getElementById("ukGallons");
+  <!-- JavaScript -->
+  <script>
+
+    function convertLiters() {
+
+      const liters =
+        parseFloat(
+          document.getElementById("liters").value
+        );
+
+      const usOutput =
+        document.getElementById("usGallons");
+
+      const ukOutput =
+        document.getElementById("ukGallons");
+
 
       if (isNaN(liters)) {
+
         usOutput.textContent = "0";
         ukOutput.textContent = "0";
+
         return;
       }
 
-      const usGallons = liters * 0.2641720524;
-      const ukGallons = liters * 0.2199692483;
 
-      usOutput.textContent = usGallons.toFixed(6);
-      ukOutput.textContent = ukGallons.toFixed(6);
+      const usGallons =
+        liters * 0.2641720524;
+
+      const ukGallons =
+        liters * 0.2199692483;
+
+
+      usOutput.textContent =
+        usGallons.toFixed(6);
+
+      ukOutput.textContent =
+        ukGallons.toFixed(6);
+
     }
+
   </script>
 
 </body>
