@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Liters to Gallons Converter</title>
+  <meta name="description" content="Convert liters to US gallons and UK Imperial gallons instantly with this simple online liters to gallons converter.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffdf8;
+      color: #222;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px 0 15px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 38px;
+      color: #333;
+    }
+
+    .intro {
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .converter {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      padding: 25px;
+      margin-top: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 18px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #a97315;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .result {
+      background: #fff8ed;
+      border: 1px solid #ead8b8;
+      border-radius: 10px;
+      padding: 18px;
+    }
+
+    .result-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 7px;
+    }
+
+    .result-value {
+      font-size: 25px;
+      font-weight: bold;
+      color: #a97315;
+      word-break: break-word;
+    }
+
+    .formula {
+      margin-top: 25px;
+      padding: 18px;
+      background: #f7f7f7;
+      border-radius: 10px;
+      line-height: 1.7;
+    }
+
+    .content {
+      margin-top: 45px;
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      margin-top: 35px;
+      color: #333;
+    }
+
+    .content a {
+      color: #8a5d0b;
+      font-weight: bold;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #fff8ed;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer a {
+      color: #8a5d0b;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .results {
+        grid-template-columns: 1fr;
+      }
+
+      .converter {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header>
+      <h1>Liters to Gallons Converter</h1>
+
+      <p class="intro">
+        Convert liters to US gallons and UK Imperial gallons instantly.
+        Enter a value below to see the equivalent volume in both gallon systems.
+      </p>
+    </header>
+
+    <section class="converter">
+
+      <div class="field">
+        <label for="liters">Liters (L)</label>
+
+        <input
+          type="number"
+          id="liters"
+          placeholder="Enter liters"
+          step="any"
+          oninput="convertLiters()"
+        >
+      </div>
+
+      <div class="results">
+
+        <div class="result">
+          <div class="result-title">US Gallons</div>
+          <div class="result-value" id="usGallons">0</div>
+        </div>
+
+        <div class="result">
+          <div class="result-title">UK / Imperial Gallons</div>
+          <div class="result-value" id="ukGallons">0</div>
+        </div>
+
+      </div>
+
+      <div class="formula">
+        <strong>Conversion formulas:</strong><br>
+        1 liter = 0.264172 US gallons<br>
+        1 liter = 0.219969 UK Imperial gallons
+      </div>
+
+    </section>
+
+    <section class="content">
+
+      <h2>How to Convert Liters to Gallons</h2>
+
+      <p>
+        To convert liters to US gallons, multiply the number of liters by
+        0.264172. To convert liters to UK Imperial gallons, multiply the
+        number of liters by 0.219969.
+      </p>
+
+      <p>
+        For example, 10 liters is approximately 2.64172 US gallons and
+        2.19969 UK gallons.
+      </p>
+
+      <h2>US Gallons vs UK Gallons</h2>
+
+      <p>
+        US gallons and UK Imperial gallons are different units of volume.
+        One US gallon equals approximately 3.78541 liters, while one UK
+        Imperial gallon equals approximately 4.54609 liters.
+      </p>
+
+      <p>
+        This difference is important when converting measurements for fuel,
+        vehicles, cooking, manufacturing, engineering, and other applications.
+      </p>
+
+      <h2>Common Conversions</h2>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Liters</th>
+              <th>US Gallons</th>
+              <th>UK Gallons</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1 L</td>
+              <td>0.2642</td>
+              <td>0.2200</td>
+            </tr>
+
+            <tr>
+              <td>5 L</td>
+              <td>1.3209</td>
+              <td>1.0998</td>
+            </tr>
+
+            <tr>
+              <td>10 L</td>
+              <td>2.6417</td>
+              <td>2.1997</td>
+            </tr>
+
+            <tr>
+              <td>20 L</td>
+              <td>5.2834</td>
+              <td>4.3994</td>
+            </tr>
+
+            <tr>
+              <td>50 L</td>
+              <td>13.2086</td>
+              <td>10.9985</td>
+            </tr>
+
+            <tr>
+              <td>100 L</td>
+              <td>26.4172</td>
+              <td>21.9969</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Online Liters to Gallons Calculator</h2>
+
+      <p>
+        For a quick and easy conversion, you can also use the main
+        <a href="https://liters2gallons.com/">
+          Liters to Gallons Converter
+        </a>.
+      </p>
+
+    </section>
+
+    <footer>
+      <p>
+        © 2026 Liters to Gallons Converter
+      </p>
+
+      <p>
+        <a href="https://liters2gallons.com/">
+          Visit liters2gallons.com
+        </a>
+      </p>
+    </footer>
+
+  </main>
+
+  <script>
+    function convertLiters() {
+      const liters = parseFloat(document.getElementById("liters").value);
+
+      const usOutput = document.getElementById("usGallons");
+      const ukOutput = document.getElementById("ukGallons");
+
+      if (isNaN(liters)) {
+        usOutput.textContent = "0";
+        ukOutput.textContent = "0";
+        return;
+      }
+
+      const usGallons = liters * 0.2641720524;
+      const ukGallons = liters * 0.2199692483;
+
+      usOutput.textContent = usGallons.toFixed(6);
+      ukOutput.textContent = ukGallons.toFixed(6);
+    }
+  </script>
+
+</body>
+</html>
